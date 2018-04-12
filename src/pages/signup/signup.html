@@ -1,4 +1,3 @@
-
 <ion-content class="background">
   <ion-card>
     <ion-card-header>
@@ -8,19 +7,23 @@
       <ion-list no-line>
         <div class="spacer" style="height: 10px;"></div>
         <ion-item>
-          <ion-input type="email" placeholder="Email" [(ngModel)]="credentials.email"></ion-input>
+          <ion-input type="text" placeholder="First Name" [(ngModel)]="newuser.firstName"></ion-input>
         </ion-item>
         <div class="spacer" style="height: 10px;"></div>
         <ion-item>
-          <ion-input type="password" placeholder="Password" [(ngModel)]="credentials.password"></ion-input>
+          <ion-input type="text" placeholder="Last Name" [(ngModel)]="newuser.lastName"></ion-input>
         </ion-item>
         <div class="spacer" style="height: 10px;"></div>
-        <a (click)="passwordreset()">Forgot Password?</a>
+        <ion-item>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="newuser.email"></ion-input>
+        </ion-item>
         <div class="spacer" style="height: 10px;"></div>
-        <button ion-button block outline color="light" (click)="signin()">Log in</button>
+        <ion-item>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="newuser.password"></ion-input>
+        </ion-item>
         <div class="spacer" style="height: 10px;"></div>
-        <p>OR</p>
-        <button ion-button clear full color="light" (click)="signup()">Don't have an account? Sign up</button>
+        <button ion-button block outline color="light" (click)="signup()">Sign Up</button>
+        <button ion-button full clear outline color="light" (click)="goback()">Go Back</button>
       </ion-list>
     </ion-card-content>
   </ion-card>

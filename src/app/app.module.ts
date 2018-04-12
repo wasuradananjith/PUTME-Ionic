@@ -9,11 +9,14 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AuthProvider } from '../providers/auth/auth';
+import { UserProvider } from '../providers/user/user';
+import {SignupPage} from "../pages/signup/signup";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
+    SignupPage,
     TabsPage
   ],
   imports: [
@@ -25,13 +28,15 @@ import { AuthProvider } from '../providers/auth/auth';
   entryComponents: [
     MyApp,
     LoginPage,
+    SignupPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
