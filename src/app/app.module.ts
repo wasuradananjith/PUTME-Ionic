@@ -22,7 +22,7 @@ import {SignupPage} from "../pages/signup/signup";
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {scrollAssist: false})
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -6,6 +6,7 @@ import  {usercreds} from '../../models/inerfaces/usercreds';
 import  {AuthProvider} from '../../providers/auth/auth';
 import {TabsPage} from "../tabs/tabs";
 import {SignupPage} from "../signup/signup";
+import { StatusBar } from '@ionic-native/status-bar';
 
 @IonicPage()
 @Component({
@@ -16,10 +17,13 @@ export class LoginPage {
   credentials = {} as usercreds;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService:AuthProvider,
-              public alertCtrl : AlertController, public toastCtrl:ToastController) {
+              public alertCtrl : AlertController, public toastCtrl:ToastController, private statusBar: StatusBar) {
   }
 
   ionViewDidLoad() {
+    this.statusBar.overlaysWebView(true);
+    this.statusBar.backgroundColorByHexString('#ffffff');
+
     if (localStorage.getItem("User_Id")!=null){
       this.navCtrl.setRoot(TabsPage);
     }

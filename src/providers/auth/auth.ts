@@ -16,8 +16,8 @@ export class AuthProvider {
   }
 
   login(credentials:usercreds):Promise<any>{
-      let url = "http://localhost/PUTME-Web/mobile/Login.php";
-      //let url = "http://putme2018-001-site1.1tempurl.com/mobile/Login.php";
+      //let url = "http://localhost/PUTME-Web/mobile/Login.php";
+      let url = "http://putme2018-001-site1.1tempurl.com/mobile/Login.php";
       let params = { email:credentials.email, password:credentials.password};
       let request = this.http.post(url,params);
 

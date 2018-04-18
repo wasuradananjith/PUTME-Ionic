@@ -4,6 +4,7 @@ import { ToastController } from 'ionic-angular';
 import {AlertController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
 import {TabsPage} from "../tabs/tabs";
+import { StatusBar } from '@ionic-native/status-bar';
 import {UserProvider} from "../../providers/user/user";
 /**
  * Generated class for the SignupPage page.
@@ -27,10 +28,13 @@ export class SignupPage {
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl:ToastController, public userService:UserProvider,
-              public alertCtrl : AlertController) {
+              public alertCtrl : AlertController, private statusBar: StatusBar) {
   }
 
   ionViewDidLoad() {
+    this.statusBar.overlaysWebView(true);
+    this.statusBar.backgroundColorByHexString('#ffffff');
+
     console.log('ionViewDidLoad SignupPage');
   }
 
