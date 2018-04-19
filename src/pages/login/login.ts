@@ -18,15 +18,13 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService:AuthProvider,
               public alertCtrl : AlertController, public toastCtrl:ToastController, private statusBar: StatusBar) {
+    if (localStorage.getItem("User_Id")!=null){
+      navCtrl.setRoot(TabsPage);
+    }
   }
 
   ionViewDidLoad() {
-    this.statusBar.overlaysWebView(true);
-    this.statusBar.backgroundColorByHexString('#ffffff');
 
-    if (localStorage.getItem("User_Id")!=null){
-      this.navCtrl.setRoot(TabsPage);
-    }
     console.log('ionViewDidLoad LoginPage');
   }
 

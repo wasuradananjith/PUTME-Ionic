@@ -32,8 +32,6 @@ export class SignupPage {
   }
 
   ionViewDidLoad() {
-    this.statusBar.overlaysWebView(true);
-    this.statusBar.backgroundColorByHexString('#ffffff');
 
     console.log('ionViewDidLoad SignupPage');
   }

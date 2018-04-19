@@ -11,13 +11,17 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
 import {SignupPage} from "../pages/signup/signup";
+import { HeaderMenuComponent } from '../components/header-menu/header-menu';
+import { SendBinProvider } from '../providers/send-bin/send-bin';
+
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     SignupPage,
-    TabsPage
+    TabsPage,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import {SignupPage} from "../pages/signup/signup";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    UserProvider
+    UserProvider,
+    SendBinProvider
   ]
 })
 export class AppModule {}
