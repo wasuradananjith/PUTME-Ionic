@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the TabsPage page.
+ * Generated class for the BinsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-tabs',
-  templateUrl: 'tabs.html',
+  selector: 'page-bins',
+  templateUrl: 'bins.html',
 })
-export class TabsPage {
+export class BinsPage {
 
-  tab1: string = "HomePage";
-  tab2: string = "BinsPage";
-  tab3: string = "SettingsPage";
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
-  constructor() {
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad BinsPage');
   }
 
 }
