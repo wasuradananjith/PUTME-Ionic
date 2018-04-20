@@ -26,7 +26,7 @@ import { SendBinProvider } from '../providers/send-bin/send-bin';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp, {scrollAssist: false})
+    IonicModule.forRoot(MyApp, {scrollAssist: false, tabsPlacement : 'top'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [

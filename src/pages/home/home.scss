@@ -8,4 +8,24 @@ page-home {
     width: 75%;
     display: inline;
   }
+
+  .text-input{
+    text-align: center;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  .text-input:-moz-placeholder {
+    text-align: center;
+  }
+
+  .text-input::-moz-placeholder {
+    text-align: center;
+  }
+
+  .text-input:-ms-input-placeholder {
+    text-align: center;
+  }
 }
