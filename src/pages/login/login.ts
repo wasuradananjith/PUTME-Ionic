@@ -41,7 +41,7 @@ export class LoginPage {
       this.authService.login(this.credentials).then(data =>{
         console.log(JSON.stringify(data));
         if (data.status){
-          let alert = this.alertCtrl.create({title: 'Success', subTitle: 'Login Successful', buttons: ['OK']});
+          let alert = this.alertCtrl.create({title: 'Welcome', subTitle: 'Login Successful', buttons: ['OK']});
           alert.present();
           localStorage.setItem('User_Id', this.credentials.email);
           this.navCtrl.setRoot(TabsPage);

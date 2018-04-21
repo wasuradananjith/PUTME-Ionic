@@ -9,6 +9,7 @@ page-home {
     display: inline;
   }
 
+<<<<<<< Updated upstream
   .text-input{
     text-align: center;
   }
@@ -28,4 +29,28 @@ page-home {
   .text-input:-ms-input-placeholder {
     text-align: center;
   }
+=======
+  ion-card.card {
+    box-shadow: none;
+    //background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    //border-radius: 5px;
+  }
+
+  a, p,
+  ion-card-header.card-header {
+    color: #000000 !important;
+  }
+
+  .item {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: medium none;
+
+    .text-input {
+      color: #000000;
+    }
+  }
+
+>>>>>>> Stashed changes
 }
