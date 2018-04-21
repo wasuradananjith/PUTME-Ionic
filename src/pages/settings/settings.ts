@@ -37,14 +37,14 @@ export class SettingsPage {
   helpClicked() {
     console.log("Help");
     //this.authService.logout();
-    let alert = this.alertCtrl.create({title: 'Help', subTitle: 'help here', buttons: ['OK']});
+    let alert = this.alertCtrl.create({title: 'Help', subTitle: 'Go to the home tab and enter the bin number and submit it', buttons: ['OK']});
     alert.present();
   }
 
   aboutusClicked() {
     console.log("AboutUs");
     //this.authService.logout();
-    let alert = this.alertCtrl.create({title: 'PutMe', subTitle: 'The Waste Management System developed by TryCatch', buttons: ['OK']});
+    let alert = this.alertCtrl.create({title: 'About Us', subTitle: 'Powered by TryCatch++', buttons: ['OK']});
     alert.present();
   }
 
