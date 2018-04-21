@@ -19,7 +19,13 @@
 
 
 <ion-content padding>
+  <!--<ion-list no-lines>-->
+    <!--<ion-item (click)="logoutClicked()"> <ion-icon name="lock" large></ion-icon> Logout</ion-item>-->
+  <!--</ion-list>-->
   <ion-list>
-    <ion-item (click)="logoutClicked()"> <ion-icon name="lock"></ion-icon> Logout</ion-item>
+    <ion-item (click)="logoutClicked()">
+      <ion-icon name="lock" item-start></ion-icon>
+      Logout
+    </ion-item>
   </ion-list>
 </ion-content>
