@@ -7,6 +7,7 @@ import  {AuthProvider} from '../../providers/auth/auth';
 import {TabsPage} from "../tabs/tabs";
 import {SignupPage} from "../signup/signup";
 import { StatusBar } from '@ionic-native/status-bar';
+import { LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -17,7 +18,7 @@ export class LoginPage {
   credentials = {} as usercreds;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService:AuthProvider,
-              public alertCtrl : AlertController, public toastCtrl:ToastController, private statusBar: StatusBar) {
+              public alertCtrl : AlertController, public toastCtrl:ToastController, private statusBar: StatusBar, public loadingCtrl: LoadingController) {
     if (localStorage.getItem("User_Id")!=null){
       navCtrl.setRoot(TabsPage);
     }
@@ -41,8 +42,13 @@ export class LoginPage {
       this.authService.login(this.credentials).then(data =>{
         console.log(JSON.stringify(data));
         if (data.status){
-          let alert = this.alertCtrl.create({title: 'Success', subTitle: 'Login Successful', buttons: ['OK']});
-          alert.present();
+          let loader = this.loadingCtrl.create({
+            content: "Please wait...",
+            duration: 3000
+          });
+          loader.present();
+          // let alert = this.alertCtrl.create({title: 'Welcome', subTitle: 'Login Successful', buttons: ['OK']});
+          // alert.present();
           localStorage.setItem('User_Id', this.credentials.email);
           this.navCtrl.setRoot(TabsPage);
         }
