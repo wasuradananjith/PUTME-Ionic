@@ -1,5 +1,4 @@
 page-home {
-
   .center{
     text-align: center;
   }
@@ -33,25 +32,7 @@ page-home {
   ion-card.card {
     box-shadow: none;
     //background: rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 1);
+    background-color: white;
     //border-radius: 5px;
-    font-family: Arial;
   }
-
-  a, p,
-  ion-card-header.card-header {
-    color: #000000 !important;
-  }
-
-
-  .item {
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: medium none;
-
-    .text-input {
-      color: #000000;
-    }
-  }
-
 }
