@@ -45,8 +45,12 @@ export class HomePage {
     else{
       this.sendBinService.sendFilledRequest(this.newrequest).then(data =>{
         console.log(JSON.stringify(data));
-        if (data.status){
+        if (data.status==1){
           let alert = this.alertCtrl.create({title: 'Success', subTitle: data.inf, buttons: ['OK']});
+          alert.present();
+        }
+        else if (data.status==2){
+          let alert = this.alertCtrl.create({title: 'Nice Try', subTitle: data.inf, buttons: ['OK']});
           alert.present();
         }
         else{

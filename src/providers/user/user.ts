@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {usercreds} from "../../models/inerfaces/usercreds";
+import { global } from "../../models/globals";
 
 /*
   Generated class for the UserProvider provider.
@@ -16,8 +16,7 @@ export class UserProvider {
   }
 
   addUser(newuser):Promise<any>{
-    let url = "http://localhost/PUTME-Web/mobile/Register.php";
-    //let url = "http://putme2018-001-site1.1tempurl.com/mobile/Register.php";
+    let url = global.hostUrl+"/mobile/Register.php";
     let params = { email:newuser.email, password:newuser.password,firstName:newuser.firstName,lastName:newuser.lastName};
     let request = this.http.post(url,params);
 

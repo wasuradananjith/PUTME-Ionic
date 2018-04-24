@@ -28,4 +28,11 @@ page-home {
   .text-input:-ms-input-placeholder {
     text-align: center;
   }
+
+  ion-card.card {
+    box-shadow: none;
+    //background: rgba(0, 0, 0, 0.5);
+    background-color: white;
+    //border-radius: 5px;
+  }
 }

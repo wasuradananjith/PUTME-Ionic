@@ -18,7 +18,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-list>
 
     <ion-card class="center">
@@ -37,7 +37,7 @@
           <ion-input type="text" placeholder="Enter Bin Number" [(ngModel)]="newrequest.binNumber"></ion-input>
         </div>
         <div class="center">
-          <button ion-button  color="secondary" block (click)="sendBinNumber()">Submit</button>
+          <button ion-button  color="secondary" (click)="sendBinNumber()">Submit</button>
         </div>
       </ion-card-content>
 

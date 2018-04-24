@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import  {usercreds} from '../../models/inerfaces/usercreds';
+import  {usercreds} from '../../models/interfaces/usercreds';
+import { global } from "../../models/globals";
 
 /*
   Generated class for the AuthProvider provider.
@@ -16,8 +17,7 @@ export class AuthProvider {
   }
 
   login(credentials:usercreds):Promise<any>{
-      //let url = "http://localhost/PUTME-Web/mobile/Login.php";
-      let url = "http://putme2018-001-site1.1tempurl.com/mobile/Login.php";
+      let url = global.hostUrl+"/mobile/Login.php";
       let params = { email:credentials.email, password:credentials.password};
       let request = this.http.post(url,params);
 

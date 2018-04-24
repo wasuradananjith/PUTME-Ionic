@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {usercreds} from "../../models/inerfaces/usercreds";
+import { global } from "../../models/globals";
 
 /*
   Generated class for the SendBinProvider provider.
@@ -16,8 +16,7 @@ export class SendBinProvider {
   }
 
   sendFilledRequest(newrequest):Promise<any>{
-    //let url = "http://localhost/PUTME-Web/mobile/mobile-filled-request-handler.php";
-    let url = "http://putme2018-001-site1.1tempurl.com/mobile/mobile-filled-request-handler.php";
+    let url = global.hostUrl+"/mobile/mobile-filled-request-handler.php";
     let params = { email:newrequest.email, binNumber:newrequest.binNumber};
     let request = this.http.post(url,params);
 
