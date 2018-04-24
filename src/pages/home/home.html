@@ -7,12 +7,7 @@
 <ion-header>
 
   <ion-navbar color="hcolor">
-    <ion-title><img style="width: 35%;height: 35%;" src="assets/logo.png"/></ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only menuToggle>
-        <ion-icon name='menu'></ion-icon>
-      </button>
-    </ion-buttons>
+    <ion-title><img style="width: 35%;height: 35%;" src="assets/logo2.png"/></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -26,15 +21,18 @@
       <img src="assets/imgs/garbage-bin.gif"/>
       <ion-card-content>
         <ion-card-title>
-          Is the garbage bin filled?
+          Garbage bin filled?
         </ion-card-title>
         <p>
          Send a request by just typing the bin number below.
           Be a smart citizen!
         </p>
-        <br>
         <div class="center">
-          <ion-input type="text" placeholder="Enter Bin Number" [(ngModel)]="newrequest.binNumber"></ion-input>
+
+          <ion-item>
+            <ion-input placeholder="Enter Bin Number" [(ngModel)]="newrequest.binNumber" clearInput></ion-input>
+          </ion-item>
+
         </div>
         <div class="center">
           <button ion-button  color="secondary" (click)="sendBinNumber()">Submit</button>

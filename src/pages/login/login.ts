@@ -7,6 +7,7 @@ import  {AuthProvider} from '../../providers/auth/auth';
 import {TabsPage} from "../tabs/tabs";
 import {SignupPage} from "../signup/signup";
 import { StatusBar } from '@ionic-native/status-bar';
+import { LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
